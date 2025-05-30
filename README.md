@@ -1,54 +1,61 @@
-# React + TypeScript + Vite
+# 🧑‍💻 Internship Assessment — React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple web application built using **React**, **TypeScript**, and **Bootstrap** as part of an internship selection process. The project includes a login screen with validation and a post-login view displaying a list of users with infinite scrolling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### 🔐 Login Page
+- Form with 3 fields:
+  - **Email**
+  - **Password**
+  - **Company Name**
+- Basic input validation:
+  - All fields required
+  - Email must include `@` and `.`
+  - Password must be at least 6 characters
+  - Company name must be at least 2 characters
+- Hardcoded credentials:
+  - `Email: test@gmail.com`
+  - `Password: 123456`
+  - `Company: test company`
+- On successful login:
+  - Navigates to the user list page
+  - Stores login state in `localStorage`
+- On failed login:
+  - Displays error toast using `react-toastify`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 👥 User List Page
+- Protected route:
+  - Redirects to login if not logged in
+- Displays a list of users fetched from `https://jsonplaceholder.typicode.com/users`
+- **Infinite scroll**:
+  - Loads 10 users at a time as the user scrolls
+- **Spinner** shown while loading more users
+- **Logout button**:
+  - Clears login state
+  - Redirects back to login screen
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧱 Tech Stack
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- React
+- Typescript
+- Bootstrap
+- React-router-dom
+- Axios
+- React-Toastify
+
+---
+
+## 🛠️ Installation & Running Locally
+
+```bash
+git clone https://github.com/yourusername/intern-assessment.git
+cd intern-assessment
+npm install
+npm run dev
