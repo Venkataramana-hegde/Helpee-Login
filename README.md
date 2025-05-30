@@ -55,7 +55,7 @@ This is a simple web application built using **React**, **TypeScript**, and **Bo
 ## 🛠️ Installation & Running Locally
 
 ```bash
-git clone https://github.com/yourusername/intern-assessment.git
-cd intern-assessment
+git clone https://github.com/Venkataramana-hegde/Helpee-Login.git
+cd Helpee-login
 npm install
 npm run dev
