@@ -1,12 +1,12 @@
-# 🧑‍💻 Internship Assessment — React + TypeScript
+# Internship Assessment — React + TypeScript
 
 This is a simple web application built using **React**, **TypeScript**, and **Bootstrap** as part of an internship selection process. The project includes a login screen with validation and a post-login view displaying a list of users with infinite scrolling.
 
 ---
 
-## 🚀 Features
+## Features
 
-### 🔐 Login Page
+### Login Page
 - Form with 3 fields:
   - **Email**
   - **Password**
@@ -28,7 +28,7 @@ This is a simple web application built using **React**, **TypeScript**, and **Bo
 
 ---
 
-### 👥 User List Page
+### User List Page
 - Protected route:
   - Redirects to login if not logged in
 - Displays a list of users fetched from `https://jsonplaceholder.typicode.com/users`
@@ -41,7 +41,7 @@ This is a simple web application built using **React**, **TypeScript**, and **Bo
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 - React
 - Typescript
@@ -52,7 +52,7 @@ This is a simple web application built using **React**, **TypeScript**, and **Bo
 
 ---
 
-## 🛠️ Installation & Running Locally
+## Installation & Running Locally
 
 ```bash
 git clone https://github.com/Venkataramana-hegde/Helpee-Login.git
